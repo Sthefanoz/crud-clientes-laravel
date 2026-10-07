@@ -2,10 +2,19 @@
 
 Aplicación web desarrollada con **Laravel 13** que aplica el patrón **MVC (Modelo – Vista – Controlador)** para gestionar clientes mediante operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar), protegidas por un sistema de **autenticación** con usuario y contraseña.
 
+## 🎥 Video demostrativo
+
+Funcionamiento del login, protección de las rutas y explicación del código:
+
+[![Ver el video en YouTube](https://img.youtube.com/vi/9QbC8-l7oyo/hqdefault.jpg)](https://youtu.be/9QbC8-l7oyo)
+
+▶️ **https://youtu.be/9QbC8-l7oyo**
+
 ---
 
 ## Tabla de contenidos
 
+- [Video demostrativo](#-video-demostrativo)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologías](#tecnologías)
 - [Requisitos previos](#requisitos-previos)
