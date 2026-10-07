@@ -1,0 +1,25 @@
+# Configuración para desplegar en Render (plan gratuito)
+services:
+  - type: web
+    name: crud-clientes-laravel
+    runtime: docker
+    plan: free
+    envVars:
+      - key: APP_NAME
+        value: Clientes App
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_LOCALE
+        value: es
+      - key: APP_FALLBACK_LOCALE
+        value: en
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_EXPIRE_ON_CLOSE
+        value: "true"
+      - key: LOG_CHANNEL
+        value: stderr

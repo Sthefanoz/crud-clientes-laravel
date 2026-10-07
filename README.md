@@ -24,6 +24,7 @@ Funcionamiento del login, protección de las rutas y explicación del código:
 - [Rutas de la aplicación](#rutas-de-la-aplicación)
 - [Seguridad](#seguridad)
 - [Pruebas automatizadas](#pruebas-automatizadas)
+- [Despliegue](#despliegue)
 - [Estructura del proyecto](#estructura-del-proyecto)
 
 ---
@@ -255,6 +256,22 @@ php artisan test
 |---|---|
 | `tests/Feature/LoginTest.php` | Redirección al login sin sesión, login correcto e incorrecto, registro, validaciones y cierre de sesión. |
 | `tests/Feature/ClienteCrudTest.php` | Listar, buscar, crear, validar, editar y eliminar clientes. |
+
+---
+
+## Despliegue
+
+La aplicación está preparada para publicarse gratis en **[Render](https://render.com)** usando Docker:
+
+| Archivo | Función |
+|---|---|
+| `Dockerfile` | Instala las dependencias de producción y prepara la imagen con PHP 8.3. |
+| `docker/start.sh` | Al arrancar: crea la base SQLite, ejecuta migraciones y seeders, e inicia el servidor. |
+| `render.yaml` | Configuración del servicio en Render (plan gratuito y variables de entorno). |
+
+**Pasos:** en Render, elegir **New → Blueprint**, conectar este repositorio y confirmar. Render lee `render.yaml` y despliega automáticamente.
+
+> En el plan gratuito el servicio se suspende tras 15 minutos sin visitas (la primera carga después tarda ~1 minuto) y la base de datos vuelve a su estado inicial (admin + 15 clientes) en cada reinicio.
 
 ---
 
