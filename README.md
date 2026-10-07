@@ -74,8 +74,8 @@ composer -V
 1. **Clonar el repositorio**
 
    ```bash
-   git clone https://github.com/Sthefanoz/clientes-app.git
-   cd clientes-app
+   git clone https://github.com/Sthefanoz/crud-clientes-laravel.git
+   cd crud-clientes-laravel
    ```
 
 2. **Instalar y configurar todo con un solo comando**
