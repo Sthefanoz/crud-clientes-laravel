@@ -15,12 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Usuario para iniciar sesión (la contraseña se guarda cifrada automáticamente)
-        User::factory()->create([
-            'name' => 'Administrador',
-            'email' => 'admin@example.com',
-            'password' => 'admin123',
-        ]);
+        // Usuario para iniciar sesión (la contraseña se guarda cifrada automáticamente).
+        // updateOrCreate evita duplicarlo si el seeder se ejecuta más de una vez.
+        User::updateOrCreate(
+            ['email' => 'admin@example.com'],
+            ['name' => 'Administrador', 'password' => 'admin123'],
+        );
 
         $this->call(ClienteSeeder::class);
     }

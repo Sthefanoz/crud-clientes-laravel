@@ -30,8 +30,9 @@ class ClienteSeeder extends Seeder
             ['Miguel Rojas', 'miguel.rojas@example.com', '0955432109', 'Av. Patria 150'],
         ];
 
+        // firstOrCreate no duplica al cliente si ya existe uno con ese email
         foreach ($clientes as [$nombre, $email, $telefono, $direccion]) {
-            Cliente::create(compact('nombre', 'email', 'telefono', 'direccion'));
+            Cliente::firstOrCreate(['email' => $email], compact('nombre', 'telefono', 'direccion'));
         }
     }
 }
